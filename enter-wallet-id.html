@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Wallet ID - Unifund</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="unifund_ss.png" alt="UniFund Logo" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#" class="create-wallet-btn" id="openModal">Create Wallet</a></li>
+        </ul>
+    </nav>
+
+    <!-- Background Section -->
+    <section class="hero">
+        <div class="wallethero-content">
+            <div class="text-box">
+                <h1>Enter Your Wallet ID</h1>
+                <form id="walletIdForm">
+                    <input type="text" placeholder="Wallet ID" required class="wallet-id-input" id="walletIdInput">
+                    <button type="submit" class="cta-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('walletIdForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const walletId = document.getElementById('walletIdInput').value; // Get the wallet ID
+            // Redirect to the home page with the wallet ID
+            location.href = `wallet-home.html?walletId=${encodeURIComponent(walletId)}`;
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

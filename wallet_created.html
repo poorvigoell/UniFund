@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Created - UniFund</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="unifund_ss.png" alt="UniFund Logo" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Wallet Created Section -->
+    <section class="wallet-created">
+        <h2>Wallet Created Successfully!</h2>
+        <p>Your wallet has been created. Keep your wallet ID secure!</p>
+        <p>Your Wallet ID is:</p>
+        <p>3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5</p>
+        <p id="walletAddressDisplay"></p>
+        <button onclick="location.href='enter-wallet-id.html'">Next</button>
+    </section>
+
+    <script>
+        // Display the wallet ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const walletId = urlParams.get('walletId');
+        document.getElementById('walletAddressDisplay').innerText = walletId ? `Your Wallet ID: ${walletId}` : '';
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

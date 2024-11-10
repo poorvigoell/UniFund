@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Home - Unifund</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="unifund_ss.png" alt="UniFund Logo" class="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">How it works</a></li>
+            <li><a href="#" class="transactions-btn">Transactions</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#" class="create-wallet-btn" id="openModal">Create Wallet</a></li>
+        </ul>
+    </nav>
+
+    <!-- Wallet ID Section -->
+    <section class="wallet-home">
+        <div class="wallet-info">
+            <h1>Welcome to Your Wallet!</h1>
+            <p>Your Wallet ID:<strong>3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5</strong> <span id="walletId"></span></p>
+            <div class="options">
+                <button class="cta-btn" onclick="location.href='transaction.html'">Make a Transaction</button>
+                <button class="cta-btn" onclick="viewTransactions()">View Transactions</button>
+                <button class="cta-btn" onclick="checkStatus()">Check Status</button>
+                <button class="cta-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
